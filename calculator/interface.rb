@@ -1,5 +1,21 @@
 require_relative 'calculator'
 
+welcome_user
+loop do
+  ask_for_number(:first)
+  first_number = get_number
+  ask_for_number(:second)
+  second_number = get_number
+  ask_for_operator
+  operator = get_operator
+  result = calculator(first_number, second_number, operator)
+  puts "Result: #{result}"
+  puts "\n"
+  puts "Do you want to continue? (type 'quit' to exit)"
+  choice = gets.chomp
+  break if choice == "quit"
+end
+
 def welcome_user
   puts "Hello, welcome to SimpleCalculator!"
   puts "\n\n\n"
@@ -34,20 +50,3 @@ def get_operator
   end
   answer
 end
-
-welcome_user
-loop do
-  ask_for_number(:first)
-  first_number = get_number
-  ask_for_number(:second)
-  second_number = get_number
-  ask_for_operator
-  operator = get_operator
-  result = calculator(first_number, second_number, operator)
-  puts "Result: #{result}"
-  puts "\n"
-  puts "Do you want to continue? (type 'quit' to exit)"
-  choice = gets.chomp
-  break if choice == "quit"
-end
-

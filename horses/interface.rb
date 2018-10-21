@@ -31,10 +31,6 @@ HORSES = [
   "John Wayne"
 ]
 
-def puts_new_line(number = 1)
-  number.times { puts }
-end
-
 puts_welcome
 player = create_player
 
@@ -71,5 +67,8 @@ end
 
 puts "Goodbye!"
 
+def puts_new_line(number = 1)
+  number.times { puts }
+end
 
 

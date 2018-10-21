@@ -17,32 +17,6 @@
 # display cart
 # display total bill
 
-def display_products(products)
-  puts "In our store today:"
-    products.each do |product, price|
-      puts "#{product.capitalize}: #{price}€"
-  end
-end
-
-#                        string
-def add_product_to_cart(product)
-  # creating a key with product => kiwi, ...
-  #.    'kiwi' = STORE['kiwi'] => 1.25
-  CART[product] = CART[product] + STORE[product]
-end
-
-def total
-  # sum = 0
-  # CART.each do |_product, price|
-  #  sum += price
-  #end
-  # sum
-  #.                      [key, value]
-  CART.reduce(0) do |sum, product|
-    sum += product[1]
-  end
-end
-
 STORE = {
   'kiwi' => 1.25,
   'banana' => 0.5,
@@ -79,3 +53,32 @@ puts " -------BILL---------"
 display_products(CART)
 puts "TOTAL: #{total}"
 puts "--------------------"
+
+
+#### METHODS
+
+def display_products(products)
+  puts "In our store today:"
+    products.each do |product, price|
+      puts "#{product.capitalize}: #{price}€"
+  end
+end
+
+#                        string
+def add_product_to_cart(product)
+  # creating a key with product => kiwi, ...
+  #.    'kiwi' = STORE['kiwi'] => 1.25
+  CART[product] = CART[product] + STORE[product]
+end
+
+def total
+  # sum = 0
+  # CART.each do |_product, price|
+  #  sum += price
+  #end
+  # sum
+  #.                      [key, value]
+  CART.reduce(0) do |sum, product|
+    sum += product[1]
+  end
+end
