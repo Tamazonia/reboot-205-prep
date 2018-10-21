@@ -36,20 +36,16 @@ def puts_new_line(number = 1)
 end
 
 puts_welcome
-puts_new_line(3)
 player = create_player
-puts_new_line
 
 loop do
+  puts_new_line
   puts "Here's the race's roster:"
   display_horses
-  puts_new_line
   display_balance(player[:purse])
-  puts_new_line
 
   horse_index = ask_for_horse
   player_pick = find_horse(horse_index)
-
   winner = randomize_race_winner
 
   if player_won?(winner, player_pick)
@@ -71,7 +67,6 @@ loop do
   print "> "
   answer = gets.chomp
   break if answer =~ /^n(o)?$/i
-  puts_new_line(4)
 end
 
 puts "Goodbye!"

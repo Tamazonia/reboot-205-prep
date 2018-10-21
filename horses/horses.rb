@@ -2,6 +2,7 @@ def display_horses
   HORSES.each_with_index do |horse, index|
     puts "#{index + 1} - #{horse}"
   end
+  puts_new_line
 end
 
 def ask_for_horse

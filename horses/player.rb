@@ -7,6 +7,7 @@ end
 
 def display_balance(balance)
   puts "You currently have $#{balance}"
+  puts_new_line
 end
 
 def update_balance(balance, amount)

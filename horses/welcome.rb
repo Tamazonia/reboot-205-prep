@@ -7,4 +7,5 @@ def puts_welcome
   puts "#################################"
   puts "\n"
   puts "Welcome to the racetrack!"
+  puts_new_line(3)
 end
