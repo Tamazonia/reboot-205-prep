@@ -6,12 +6,6 @@ def add_item(name)
 end
 
 def toggle_item(item)
-  # puts "Which item do you want to toggle? (1-#{LIST.length})"
-
-  # # validates that user picks existing index
-  # index = get_index
-
-  # item = LIST[index]
   item[:done] = !item[:done]
 end
 
